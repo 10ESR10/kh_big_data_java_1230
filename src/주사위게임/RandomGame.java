@@ -13,7 +13,7 @@ public class RandomGame {
 
             if ((rand1 + rand2) == 12) {
                 // 횟수가 정해져 있지 않으면 while문으로
-                System.out.printf("무인도를 %d 번 만에 탈출 합니다.\n", cnt);
+                System.out.printf("무인도를 %d 번 만에 탈출 합니다.\n",  cnt);
                 break;
             } else {
                 System.out.println("주사위의 합이 " + (rand1 + rand2) + "입니다.");
