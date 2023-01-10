@@ -21,7 +21,7 @@ public class StringType {
         System.out.println(d.charAt(1));
         //replaceAll : 문자열 중 특정 문자열을 다른 문자열로 대체 할 때 사용
         String language = "Java, Python, C, C++, JavaScript, Kotlin, Swift";
-                System.out.println(language.replaceAll("Kotlin", ""));
+                System.out.println(language.replace("Kotlin", ""));
         // substring : 문자열에서 특정 문자열을 뽑아 낼 때 사용
         String e = "Hello Java";
         System.out.println(e.substring(6)); // 시작 부터 끝까지 추출
