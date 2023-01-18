@@ -12,11 +12,38 @@ public class PwdCheckMain {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         CheckPWClass checkPW = new CheckPWClass();
-        String password;
+        String pwd;
         while (true) {
-            password = sc.next();
-            if (password.equalsIgnoreCase("quit")) break;
-            checkPW.inputPW(password);
+            System.out.print("암호 입력 : ");
+            pwd = sc.next();
+            if (pwd.equals("종료") || pwd.equalsIgnoreCase("quit")) break;
+            checkPW.inputPW(pwd);
+
+            if (!checkPW.validLength(pwd)) {
+                System.out.println("Bad Length password");
+                continue;
+            }
+
+            if (!checkPW.validNumber(pwd)) {
+                System.out.println("Bad Number Password");
+                continue;
+
+            }
+            if (!checkPW.validLowerAlphabet(pwd)) {
+                System.out.println("Bad LowerAlphabet password");
+                continue;
+
+            }
+            if (!checkPW.validUpperAlphabet(pwd)) {
+                System.out.println("Bad UpperAlphabet password");
+                continue;
+
+            }
+            if(!checkPW.validRex(pwd)) {
+                System.out.println("Bad Rex password");
+                continue;
+            }
+           System.out.println("Good password");
         }
     }
 }
